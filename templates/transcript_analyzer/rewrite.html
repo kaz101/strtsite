@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet"  href="{% static 'css/re.css' %}">
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container all total">
+
+    <div class="container buttons">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+      <div class="fourth"></div>
+    </div>
+    <div class="container all">
+
+      <div id="rowone" class="row top">
+        <span class="first"></span>
+        <span class="second"><h1>ANALYZER</h1></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+      </div>
+
+<div class="container1">
+
+
+  <div class="column one">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
+  </div>
+
+  <div class="output characters">
+  <table>
+    <th> </th><th></th><th align="left">Lines</th><th align="left">Words</th>
+      {% for i in names %}
+      <tr>
+      <td><img src={{i.3}} /></td><td>{{i.0}}</td><td>{{i.1}}</td><td>{{i.2}}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>
+<div class="url container">
+<form class="input box" method="POST">
+
+    {% for field in form %}
+    <p class="url">{{ field }}</p>
+    {% endfor %}
+    {% csrf_token %}
+  </form>
+<div class="output actors">
+  <table>
+      {% for i in actors %}
+      <tr>
+          <td><img src="/media/{{ i.picture }}" /></td><td>{{i.first_name}}</td>
+      </tr>
+      {% endfor %}
+  </table>
+
+</div>
+</div>
+  </div>
+    <div class="row bottom">
+      <span class="first"></span>
+      <span class="second"></span>
+      <span class="third"></span>
+      <span class="fourth"></span>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Analyzer</title>
+ <link rel="stylesheet"  href="{% static 'css/ta.css' %}">
+  </head>
+
+  <div class="wrapper">
+  <body>
+
+    <div class="container1">
+
+<div class="top">
+</div>
+
+<div class="topmiddle"><h1>Analyzer</h>
+</div>
+
+<div class="righttop">
+</div>
+
+<div class="end">
+</div>
+</div>
+
+  <div class="container2">
+
+  <div class="leftside">
+  </div>
+
+  <div class="leftside two">
+  </div>
+  <div class="split left">
+  <table>
+    <th> </th><th></th><th align="left">Lines</th><th align="left">Words</th>
+      {% for i in names %}
+      <tr>
+      <td><img src={{i.3}} /></td><td>{{i.0}}:</td><td>{{i.1}}</td><td>{{i.2}}</td>
+      </tr>
+      {% endfor %}
+  </table>
+  </div>
+</div>
+
+
+
+
+
+  </body>
+</div>
+</html>
