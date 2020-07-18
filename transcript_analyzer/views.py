@@ -72,7 +72,7 @@ def display(request):
                         pass
                     else:
                         print('saving '+ person)
-                        entry = [person,get_picture(person,series)]
+                        entry = [person,get_picture(request,person,series)]
                         save_to_char_db(request,entry)
                     if i[:i.index(':')] not in people:
                         #print('** '+i)
@@ -104,7 +104,7 @@ def display(request):
             mydict.update(actorsDict)
             mydict.update(formDict)
             return mydict
-    def get_picture(person, series):
+    def get_picture(request,person, series):
         import random
         from selenium import webdriver
         from bs4 import BeautifulSoup
