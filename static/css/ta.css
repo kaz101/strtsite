@@ -2,79 +2,105 @@ img {
   height: 80px;
   width: 100px;
 }
-
 h1 {
-  color: orange;
+  display: table-cell;
+  vertical-align: middle;
+  color:#fcbe9a;
   font-size: 50px;
   margin-left: 20px;
   text-align: center;
 }
-
 .topmiddle {
-  background-color: red;
+  text-align: center;
+  display: table;
+  margin-left: 10px;
+  margin-right: 10px;
   float: left;
-  height: 10%;
 }
-
 .righttop {
-  width: 10%;
-  height: 10%;
-  background-color: orange;
-  border-radius: 10px;
-  border: orange solid 40px;
-  float: left;
+  background-color: #fcbe9a;
+  border-radius: 5px;
+  border: #fcbe9a solid 30px;
 }
-
 .top {
-width: 10%;
-height: 50%;
-background-color: white;
-border: white solid 1px;
-border-radius: 10px;
-border-top-left-radius: 40px;
+background-color: #fcbe9a;
+border: #fcbe9a solid 30px;
+border-radius: 5px;
+border-top-left-radius: 200px;
 border-bottom-left-radius: 0px;
+margin-left: 200px;
 float: left;
 }
-
 .split {
-  height: 50%;
+  height: 20%;
   width: 46%;
-  z-index: 1;
-  position: absolute;
   overflow: auto;
   background-color: #0a0a0a;
   border: #0a0a0a solid 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
-  margin:100px;
   color: white;
   font-size: 20px;
 }
-
 .right {
-  right: 0;
   margin-top: 200px;
-
+  margin-left: 10px;
 }
-
 .left {
-  left: 0;
+
+  grid-column: 3 / span 4;
+  grid-row: 2 / span 10;
   width: auto;
-  margin-top: 10;
-  margin-left: 200px;
-}
 
-.bottom {
-  background-color: black;
-  height: 100%;
 }
-
 body {
   background-color: black;
-
 }
-
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+.container1{
+  display: inline-grid;
+  grid-template-columns: 0.1fr 1fr 20fr 1fr;
+  position: fixed;
+  top:0;
+}
+.end{
+  border: #fce29a solid 30px;
+  border-radius: 5px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-left: 10px;
+}
+.container2{
+  display: grid;
+  grid-template-columns: repeat(100, 1%);
+  grid-template-rows: repeat(100,1%);
+  position: fixed;
+  top:6%;
+}
+.leftside{
+  border: #fcbe9a solid 15px;
+  background-color: #fcbe9a;
+  margin-left: 200px;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  grid-column: 0;
+  width: 5%;
+  grid-row: 1;
+}
+.two{
+  background-color: #9564a3;
+  border: #9564a3 solid 15px;
+  width: 2%;
+  grid-column: 20 / span 10;
+  grid-row: 2;
+  margin-top: 10px;
+
+}
+.wrapper{
+  min-width: 1000px;
+  overflow: scroll;
 }
