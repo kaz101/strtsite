@@ -111,17 +111,24 @@ img{
 
 }
 .container.buttons div:hover{
-  border-color: #ffd391;
-  background-color:  #ffd391;
+  background-image: url('../button_hover.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
 }
 .container.buttons div{
   flex-grow: 1;
-  width: 6em;
+  border: none;
+  width: 8em;
   margin:30px;
   border-radius: 100px;
   margin-top: 15%;
   margin-bottom: 15%;
-  background-image: url('buttons.png');
+  background-image: url('../buttons.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .container.buttons .first{
 margin-top: 150%;
