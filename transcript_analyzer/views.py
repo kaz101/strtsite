@@ -92,11 +92,10 @@ def display(request):
                 print(i +' '* (20 - len(i))+str(line_counts[people.index(i)])+' '*(20 - len(str(line_counts[people.index(i)])))+str(word_count[people.index(i)]))
                 list = [i,line_counts[people.index(i)],word_count[people.index(i)], person[0].picture]
                 mydict['names'].append(list)
+            mydict['names'] = sorted(mydict['names'], key=lambda name: int(name[2]))
+            mydict['names'].reverse()
             mydict.update(actorsDict)
             mydict.update(formDict)
-        #print(mydict)
-        #print(mydict['actors'][0].first_name)
-            print(mydict)
             return mydict
         except Exception as e:
             print(e)
