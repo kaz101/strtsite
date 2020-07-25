@@ -58,7 +58,7 @@
   <table>
       {% for i in actors %}
       <tr>
-          <td><img src="/media/{{ i.picture }}" /></td><td>{{i.first_name}}</td>
+          <td><img src="{{ i.picture }}" /></td><td>{{i.first_name}}</td>
       </tr>
       {% endfor %}
   </table>
