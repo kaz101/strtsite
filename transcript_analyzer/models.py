@@ -7,6 +7,6 @@ class Actor(models.Model):
     picture = models.ImageField(blank=True)
 class Character(models.Model):
     name = models.CharField(max_length=30)
-    picture = models.CharField(max_length=1000)
+    picture = models.CharField(max_length=100000)
 class Episode(models.Model):
     name = models.CharField(max_length=200)

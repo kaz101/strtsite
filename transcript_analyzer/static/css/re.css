@@ -199,7 +199,10 @@ margin-bottom: 150%;
 .output.characters{
   margin-top: 5%;
   min-width: 400px;
-  flex-grow: 10;
+  flex-grow: 20;
+}
+td{
+  width: 40px;
 }
 #id_url{
   width: 100%;
