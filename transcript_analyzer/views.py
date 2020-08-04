@@ -162,7 +162,7 @@ def get_picture(request,person, series):
                 images.append(i.get_attribute('src'))
         driver.close()
         try:
-            link = images[70]
+            link = images[len(images)-1]
         except:
             link = None
         return link
