@@ -58,14 +58,12 @@
   <table class="charcheckboxes">
       {% for i in checkboxes %}
       <tr>
-          <td><img src="/media/{{ i.picture }}" /></td><td>{{i.name}}</td><td>{{ i.words }}</td>
+          <td><img src="media/{{ i.picture }}" /></td><td>{{i.name}}</td><td>{{ i.words }}</td>
       </tr>
       <tr>
-<<<<<<< HEAD
+
           <td>{{ i.select_char }}</td>
-=======
-          <td><img src="{{ i.picture }}" /></td><td>{{i.first_name}}</td>
->>>>>>> 825ba6c5217f88a6ce018e0860871603ce4fefd5
+          <td><img src="media/{{ i.picture }}" /></td><td>{{i.first_name}}</td>
       </tr>
       {% endfor %}
   </table>
