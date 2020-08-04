@@ -40,7 +40,6 @@ def words_per_actor(request, characters, actorsDict):
         actor.picture = i.picture
         actor.characters = characters_list
         actor_list.append(actor)
-    actor.reload()
     checkboxes['checkboxes'] = actor_list
     return checkboxes
 def percentage(request):
